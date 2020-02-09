@@ -1,4 +1,4 @@
-from apweather import search_by_name, search_by_coordinates
+from weather_APIs.apweather import search_by_name, search_by_coordinates
 
 def test_fail():
 	respond = search_by_name('TT')
