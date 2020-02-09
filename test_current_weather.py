@@ -1,7 +1,7 @@
 from weather_APIs.apweather import search_by_name, search_by_coordinates
 
 def test_search_fail():
-	respond = search_by_name('New York')
+	respond = search_by_name('TT')
 	assert respond['status'] == 'Fail'
 
 	respond = search_by_coordinates(1000, 10)
