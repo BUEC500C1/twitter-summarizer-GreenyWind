@@ -16,9 +16,9 @@ Users can search the current weather of over 200,000 airports specified by the c
 
 ## Examples:
 1. User story: A user would like to find the current weather in the airport of London.
-![search by name](./ "London Airport")
+![search by name](./usercase1.png "London Airport")
 2. User story: A user would like to find the current weather of Newark airport in New York. Yet because there are four airports in New York, he has to use the coordinates to specify the airport he is looking for.
-![search by coordinates](./ Newark Airport)
+![search by coordinates](./usercase2.png "Newark Airport")
 
 # Implementation
 I took advantage of only _OpenWeather API_ but not _National Weather Service API_ to implement my API because it has several disdvantages as shown below:
