@@ -1,7 +1,7 @@
 from weather_APIs.apweather import forecast_by_name, forecast_by_coordinates
 
 def test_forecast_fail():
-	respond = forecast_by_name('New York')
+	respond = forecast_by_name('TT')
 	assert respond['status'] == 'Fail'
 
 	respond = forecast_by_coordinates(1000, 10)
