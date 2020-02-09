@@ -1,7 +1,6 @@
 # API Description
 ## Functions: 
-Users can search the current weather of over 200,000 airports specified by the city name or location (geographic coordinates). User can also get the 24h forecast of the specified airport.
-
+Users can search the current weather of over 200,000 airports specified by the city name or location (geographic coordinates).
 ## API interfaces:
 1. search_by_name(city_name, state=None, country_abbreviation=None):
     * Parameters:
@@ -14,22 +13,17 @@ Users can search the current weather of over 200,000 airports specified by the c
         * latitude: the latitude of the airport.
         * ongitude: the longitude of the airport.
     * Return value: A python dictionary object containing the current weather of the airport.
-3. forecast_by_coordinates(latitude, longitude):
-    * Parameters: same as above
-    * Return value: A python dictionary object containing the 24h tempreture forecast of the specified airport.
 
 ## Examples:
 1. User story: A user would like to find the current weather in the airport of London.
 ![search by name](./ "London Airport")
 2. User story: A user would like to find the current weather of Newark airport in New York. Yet because there are four airports in New York, he has to use the coordinates to specify the airport he is looking for.
 ![search by coordinates](./ Newark Airport)
-3. User Story: A user would like to know the tempretures in the next 24 hours in Logan airport.
-![search by name](./ "Logan Airport")
 
 # Implementation
-I took advantage both of the _OpenWeather API_ and the _National Weather Service API_ to implement my API:
-|                                 | OpenWeather API | National Weather Service API |
-| ------------------------------- | --------------- | ---------------------------- |
-|         search by name ?        |       Yes       |              No              |
-|     searvh by coordinates?      |       Yes       |              No              |
-| provide weather free forecast ? |       Yes       |              No              |
+I took advantage of only _OpenWeather API_ but not _National Weather Service API_ to implement my API because it has several disdvantages as shown below:
+|                                   | OpenWeather API | National Weather Service API |
+| --------------------------------- | --------------- | ---------------------------- |
+|         search by name ?          |       Yes       |              No              |
+|     searvh by coordinates?        |       Yes       |             Yes              |
+| Support coordinates are limited ? |       No        |             Yes              |
