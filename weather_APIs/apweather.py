@@ -69,5 +69,5 @@ def forecast_by_coordinates(latitude, longitude):
     return respond
 
 if __name__ == '__main__':
-    r = forecast_by_coordinates(51.51, -0.13)
+    r = forecast_by_coordinates(42.3656, 71.0096)
     print(r)
