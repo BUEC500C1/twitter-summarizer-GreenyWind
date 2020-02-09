@@ -1,9 +1,10 @@
 import requests as req
 
-def F_to_C(temp_F):
-    return ((temp_F - 32) / 1.8)
+def K_to_C(temp_F):
+    return temp_F - 273.1
 
 def search_by_name(city_name, state=None, country_abbreviation=None):
+    respond = {}
     respond['status'] = 'Fail'
     if not type(city_name) == str:
         return respond
@@ -19,14 +20,15 @@ def search_by_name(city_name, state=None, country_abbreviation=None):
     if r.status_code != 200:
         return respond
     r = r.json()
-    respond.update('coord', r['coord'])
-    respond.update("weather", r["weather"][0]["main"])
-    respond.update("description", r["weather"][0]["description"])
-    respond.update("tempreture", F_to_C(r["main"]["temp"]))
-    respond.update("temp_min", F_toC(r["main"]["temp_min"]))
-    respond.update("temp_max", F_toC(r["main"]["temp_max"]))
-    respond.update("humidity", r["main"]["humidity"])
-    respond.update("wind", r["wind"]["speed"])
+    respond['status'] = 'Success'
+    respond.update(coord = r['coord'])
+    respond.update(weather = r["weather"][0]["main"])
+    respond.update(description = r["weather"][0]["description"])
+    respond.update(tempreture = K_to_C(r["main"]["temp"]))
+    respond.update(temp_min = K_to_C(r["main"]["temp_min"]))
+    respond.update(temp_max = K_to_C(r["main"]["temp_max"]))
+    respond.update(humidity = r["main"]["humidity"])
+    respond.update(wind = r["wind"]["speed"])
     return respond
 
 def search_by_coordinates(latitude, longitude):
@@ -37,3 +39,7 @@ def forecast_by_name(city_name, state=None, country_abbreviation=None):
 
 def forecast_by_coordinates(latitude, longitude):
     pass
+
+if __name__ == '__main__':
+    r = search_by_name('London')
+    print(r)
