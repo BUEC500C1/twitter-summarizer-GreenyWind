@@ -1,4 +1,4 @@
-from weather_APIs/apweather import forecast_by_name, forecast_by_coordinates
+from weather_APIs.apweather import forecast_by_name, forecast_by_coordinates
 
 def test_fail():
 	respond = forecast_by_name('New York')
