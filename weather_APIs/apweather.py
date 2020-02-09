@@ -30,7 +30,10 @@ def search_by_name(city_name, state=None, country_abbreviation=None):
     return respond
 
 def search_by_coordinates(latitude, longitude):
+    pass
 
 def forecast_by_name(city_name, state=None, country_abbreviation=None):
+    pass
 
 def forecast_by_coordinates(latitude, longitude):
+    pass
