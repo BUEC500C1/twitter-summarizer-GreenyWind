@@ -14,10 +14,7 @@ Users can search the current weather of over 200,000 airports specified by the c
         * latitude: the latitude of the airport.
         * ongitude: the longitude of the airport.
     * Return value: A python dictionary object containing the current weather of the airport.
-3. forecast_by_name(city_name, state=None, country_abbreviation=None):
-    * Parameters: same as above
-    * Return value: A python dictionary object containing the 24h tempreture forecast of the specified airport.
-4. forecast_by_coordinates(latitude, longitude):
+3. forecast_by_coordinates(latitude, longitude):
     * Parameters: same as above
     * Return value: A python dictionary object containing the 24h tempreture forecast of the specified airport.
 
