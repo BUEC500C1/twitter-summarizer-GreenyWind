@@ -38,7 +38,7 @@ def forecast_by_name(city_name, state=None, country_abbreviation=None):
     return 'Fail'
 
 def forecast_by_coordinates(latitude, longitude):
-    pass
+    return 'Fail'
 
 if __name__ == '__main__':
     r = search_by_name('London')
