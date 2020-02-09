@@ -1,6 +1,6 @@
 from weather_APIs/apweather import search_by_name, search_by_coordinates
 
-def test_not_exist():
+def test_fail():
 	respond = search_by_name('New York')
 	assert respond['status'] == 'Fail'
 
